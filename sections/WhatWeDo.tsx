@@ -74,7 +74,7 @@ export default function WhatWeDo() {
   };
 
   return (
-    <section id="what-we-do" className="bg-white pt-10 pb-20 sm:pt-14 sm:pb-28">
+    <section id="what-we-do" className="bg-white pt-4 pb-20 sm:pt-6 sm:pb-28">
       <Container className="flex flex-col gap-14">
         <SectionHeading
           eyebrow="What We Do"

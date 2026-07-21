@@ -1,6 +1,15 @@
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 
-const logos = ["JIO", "AXIS BANK", "HDFC BANK", "ICICI BANK", "NSE", "INDUSIND BANK", "TATA CAPITAL"];
+const logos = [
+  { name: "JIO", src: "/logos/jio.png" },
+  { name: "Axis Bank", src: "/logos/axis.webp" },
+  { name: "HDFC Bank", src: "/logos/hdfc.svg" },
+  { name: "ICICI Bank", src: "/logos/icicbank.webp" },
+  { name: "NSE", src: "/logos/nselogo.jpg" },
+  // { name: "IndusInd Bank", src: "/logos/induslandbank.png" },
+  // { name: "Tata Capital", src: "/logos/tatacapital.png" },
+];
 
 export default function TrustedBy() {
   return (
@@ -15,10 +24,16 @@ export default function TrustedBy() {
           <div className="animate-marquee flex w-max items-center gap-x-16 hover:[animation-play-state:paused]">
             {[...logos, ...logos].map((logo, i) => (
               <span
-                key={`${logo}-${i}`}
-                className="shrink-0 text-lg font-bold tracking-tight text-slate-400 transition-colors hover:text-slate-600 sm:text-xl"
+                key={`${logo.name}-${i}`}
+                className="flex h-8 w-[130px] shrink-0 items-center justify-center grayscale opacity-60 transition hover:opacity-100 hover:grayscale-0 sm:h-9"
               >
-                {logo}
+                <Image
+                  src={logo.src}
+                  alt={logo.name}
+                  width={160}
+                  height={48}
+                  className="h-full w-auto object-contain"
+                />
               </span>
             ))}
           </div>

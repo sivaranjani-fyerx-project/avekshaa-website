@@ -92,7 +92,7 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number>(0);
 
   return (
-    <section className="relative w-full overflow-hidden px-6 pt-10 pb-20 sm:pt-14 sm:pb-28 lg:px-10">
+    <section className="relative w-full overflow-hidden px-6 pt-4 pb-20 sm:pt-6 sm:pb-28 lg:px-10">
       {/* decorative side arcs */}
       <div className="pointer-events-none absolute -left-40 top-1/3 h-96 w-96 rounded-full border border-white/60" />
       <div className="pointer-events-none absolute -right-40 top-1/3 h-96 w-96 rounded-full border border-white/60" />
