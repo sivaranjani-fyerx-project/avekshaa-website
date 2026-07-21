@@ -2,7 +2,26 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0a1420;
+
+  /* Brand palette — deep navy + teal, tuned for an enterprise
+     reliability-engineering brand (BFSI audience, no playful hues). */
+  --color-navy-950: #051220;
+  --color-navy-900: #081b2e;
+  --color-navy-800: #0d2740;
+  --color-navy-700: #123554;
+  --color-ink: #0a1420;
+  --color-slate-600: #47566b;
+  --color-slate-500: #64748b;
+  --color-teal-700: #0b6b76;
+  --color-teal-600: #0e8394;
+  --color-teal-500: #16a2ae;
+  --color-teal-400: #4fc4cd;
+  --color-teal-100: #e3f6f6;
+  --color-teal-50: #f0fbfa;
+  --color-amber-700: #b45309;
+  --color-amber-500: #f2a541;
+  --color-amber-300: #fcd34d;
 }
 
 @theme inline {
@@ -10,17 +29,68 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+  --font-heading: var(--font-jakarta);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-navy-950: var(--color-navy-950);
+  --color-navy-900: var(--color-navy-900);
+  --color-navy-800: var(--color-navy-800);
+  --color-navy-700: var(--color-navy-700);
+  --color-ink: var(--color-ink);
+  --color-slate-600: var(--color-slate-600);
+  --color-slate-500: var(--color-slate-500);
+  --color-teal-700: var(--color-teal-700);
+  --color-teal-600: var(--color-teal-600);
+  --color-teal-500: var(--color-teal-500);
+  --color-teal-400: var(--color-teal-400);
+  --color-teal-100: var(--color-teal-100);
+  --color-teal-50: var(--color-teal-50);
+  --color-amber-700: var(--color-amber-700);
+  --color-amber-500: var(--color-amber-500);
+  --color-amber-300: var(--color-amber-300);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 26s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee {
+      animation: none;
+    }
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-gradient-ink {
+    padding-block-end: 0.1em;
+    background-image: linear-gradient(98deg, #202020 43.06%, #8f8f8f 91.81%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
