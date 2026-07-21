@@ -2,8 +2,8 @@
 // Next.js (App Router or Pages) — requires Tailwind CSS.
 // import Recognition from "@/components/Recognition";
 // No client hooks are used, so this can render as a Server Component.
-
-import React, { useState } from 'react';
+'use client';
+import React from 'react';
 /* ------------------------------- Icons ------------------------------- */
 
 type IconProps = { className?: string };
