@@ -3,8 +3,7 @@
 // import Recognition from "@/components/Recognition";
 // No client hooks are used, so this can render as a Server Component.
 
-import React from "react";
-
+import React, { useState } from 'react';
 /* ------------------------------- Icons ------------------------------- */
 
 type IconProps = { className?: string };
@@ -81,7 +80,7 @@ function ArrowUpRight({ className }: IconProps) {
 
 /* ------------------------------- Data -------------------------------- */
 
-type Award = { title: string; Icon: (p: IconProps) => JSX.Element; color: string };
+type Award = { title: string; Icon: (p: IconProps) => React.JSX.Element; color: string };
 
 const leftAwards: Award[] = [
   { title: "Red Herring Top 100 Winner", Icon: TrophyIcon, color: "text-[#e11d48]" },
