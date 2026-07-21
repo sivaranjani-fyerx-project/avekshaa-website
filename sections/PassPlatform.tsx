@@ -81,22 +81,30 @@ const features = [
     title: "2 US Patents",
     description: "Recognized innovation in AI-powered performance engineering and reliability assurance.",
     Icon: PatentIcon,
+    bg: "bg-[#dbe5f1]",
+    iconColor: "text-[#1154a1]",
   },
   {
     title: "Intelligent Root Cause Analysis",
     description: "Reduce troubleshooting time and accelerate issue resolution through automated diagnostics.",
     Icon: RootCauseIcon,
+    bg: "bg-[#dcf4ee]",
+    iconColor: "text-[#16b48e]",
   },
   {
     title: "Predictive Risk Intelligence",
     description: "Identify potential performance and availability risks before they impact operations.",
     Icon: PredictiveIcon,
+    bg: "bg-[#fef5dc]",
+    iconColor: "text-[#fbb916]",
   },
   {
     title: "Enterprise Reliability Governance",
     description:
       "Track service-level objectives, business impact, and operational performance through a unified executive dashboard.",
     Icon: GovernanceIcon,
+    bg: "bg-[#f9e3fd]",
+    iconColor: "text-[#d946ef]",
   },
 ];
 
@@ -180,7 +188,7 @@ function ReliabilityGauge({ value = 87 }: { value?: number }) {
 
 export default function PassPlatform() {
   return (
-    <section className="w-full bg-[#f4f4ef] px-6 py-20 sm:py-28 lg:px-10">
+    <section className="w-full px-6 pt-4 pb-14 sm:pt-6 sm:pb-20 lg:px-10">
       <div className="mx-auto max-w-6xl">
         {/* Header row */}
         <div className="mb-8 flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
@@ -191,7 +199,10 @@ export default function PassPlatform() {
             </div>
             <h2 className="max-w-xl text-3xl font-bold leading-[1.1] tracking-tight text-[#1b1b1b] sm:text-[2.6rem]">
               AI-Powered Enterprise
-              <br className="hidden sm:block" /> Reliability Engineering
+              <br className="hidden sm:block" />{" "}
+              <span className="bg-[linear-gradient(90deg,#16b48e,#9b5cff87)] bg-clip-text text-transparent">
+                Reliability Engineering
+              </span>
             </h2>
           </div>
 
@@ -245,12 +256,12 @@ export default function PassPlatform() {
 
           {/* Feature grid */}
           <div className="grid gap-4 sm:grid-cols-2">
-            {features.map(({ title, description, Icon }) => (
+            {features.map(({ title, description, Icon, bg, iconColor }) => (
               <div
                 key={title}
-                className="flex flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition hover:border-[#d8d8d8] hover:shadow-sm"
+                className={`flex flex-col rounded-2xl border border-black/5 ${bg} p-6 transition hover:shadow-sm`}
               >
-                <span className="mb-8 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#f2f2ef] text-[#1b1b1b]">
+                <span className={`mb-8 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white ${iconColor}`}>
                   <Icon className="h-5 w-5" />
                 </span>
                 <h4 className="text-lg font-semibold leading-snug text-[#1b1b1b]">{title}</h4>

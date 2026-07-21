@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import Eyebrow from "./Eyebrow";
 
 export default function SectionHeading({
@@ -9,7 +10,7 @@ export default function SectionHeading({
   className = "",
 }: {
   eyebrow?: string;
-  title: string;
+  title: ReactNode;
   description?: string;
   align?: "left" | "center";
   tone?: "light" | "dark";

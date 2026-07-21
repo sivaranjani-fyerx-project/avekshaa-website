@@ -2,7 +2,7 @@ import { ShieldCheck } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import Eyebrow from "@/components/ui/Eyebrow";
-import LeadForm from "@/components/LeadForm";
+import HeroCarousel from "@/components/HeroCarousel";
 
 export default function Hero() {
   return (
@@ -24,7 +24,11 @@ export default function Hero() {
           </Eyebrow>
 
           <h1 className="text-gradient-ink font-heading text-balance text-[34px] leading-[1.15] font-bold tracking-[-1.2px] sm:text-[40px] sm:tracking-[-1.6px] lg:text-[50px] lg:leading-[1.1] lg:tracking-[-2.1px]">
-            Reliability isn't an IT metric. It's a business imperative.
+            Reliability isn't an{" "}
+            <span className="bg-[linear-gradient(90deg,#16b48e,#9b5cff87)] bg-clip-text text-transparent">
+              IT metric
+            </span>
+            . It's a business imperative.
           </h1>
 
           <p className="max-w-2xl text-balance text-[14px] leading-relaxed text-slate-600">
@@ -41,9 +45,9 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right side: lead form */}
+        {/* Right side: image carousel */}
         <div className="relative">
-          <LeadForm />
+          <HeroCarousel />
         </div>
       </Container>
     </section>

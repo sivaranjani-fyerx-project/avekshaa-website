@@ -119,7 +119,10 @@ export default function Industries() {
             Proven Results
           </span>
           <h2 className="text-4xl font-bold tracking-tight text-[#1b1a38] sm:text-[3.25rem] sm:leading-[1.08]">
-            Proven Results Across Mission-Critical Industries
+            <span className="bg-[linear-gradient(90deg,#16b48e,#9b5cff87)] bg-clip-text text-transparent">
+              Proven Results
+            </span>{" "}
+            Across Mission-Critical Industries
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-[#7c7a90]">
             Organizations operating in highly regulated and high-volume environments rely on Avekshaa to improve

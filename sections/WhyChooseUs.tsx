@@ -100,7 +100,10 @@ export default function WhyChooseUs() {
             Why Avekshaa
           </span>
           <h2 className="text-4xl font-extrabold tracking-tight text-[#15142b] sm:text-[3rem] sm:leading-[1.05]">
-            Why Enterprises Choose Avekshaa
+            Why Enterprises Choose{" "}
+            <span className="bg-[linear-gradient(90deg,#16b48e,#9b5cff87)] bg-clip-text text-transparent">
+              Avekshaa
+            </span>
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-[#6f6c86]">
             A patented platform, proven delivery frameworks, and deep industry expertise—built to make reliability a
@@ -137,7 +140,7 @@ export default function WhyChooseUs() {
             style={{ backgroundColor: f.accent + "14" }}
           >
             <Image
-              src="/heroright.avif"
+              src="/heroright.jpg"
               alt="Avekshaa platform overview"
               width={2048}
               height={1420}

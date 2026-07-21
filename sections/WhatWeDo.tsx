@@ -78,7 +78,14 @@ export default function WhatWeDo() {
       <Container className="flex flex-col gap-14">
         <SectionHeading
           eyebrow="What We Do"
-          title="Engineering Reliability Into Every Digital Experience"
+          title={
+            <>
+              Engineering Reliability Into Every{" "}
+              <span className="bg-[linear-gradient(90deg,#16b48e,#9b5cff87)] bg-clip-text text-transparent">
+                Digital Experience
+              </span>
+            </>
+          }
           description="Modern enterprises depend on digital platforms to generate revenue, serve customers, and support business operations. Avekshaa helps organizations build resilient systems that perform reliably under any condition."
           align="center"
           className="mx-auto"
@@ -112,7 +119,7 @@ export default function WhatWeDo() {
                     className={`flex items-center justify-center rounded-2xl p-5 sm:p-6 ${accentStyles[pillar.accent]}`}
                   >
                     <Image
-                      src="/heroright.avif"
+                      src="/heroright.jpg"
                       alt="Avekshaa platform overview"
                       width={2048}
                       height={1420}
